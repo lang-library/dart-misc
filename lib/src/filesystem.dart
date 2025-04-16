@@ -12,11 +12,19 @@ String getCwd() {
   return io.Directory.current.absolute.path;
 }
 
-String getFileName(String $path) {
+String pathFullName(String $path) {
+  return path.normalize(path.absolute($path));
+}
+
+String pathDirectoryName(String $path) {
+  return path.dirname($path);
+}
+
+String pathFileName(String $path) {
   return path.basename($path);
 }
 
-String getBaseName(String $path) {
+String pathBaseName(String $path) {
   return path.basenameWithoutExtension($path);
 }
 

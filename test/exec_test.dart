@@ -12,8 +12,10 @@ void main() async
   misc.echo('エコーします2', 'タイトル');
   misc.setCwd(r'C:\Windows');
   misc.dump(misc.getCwd());
-  misc.dump(misc.getFileName(r'C:\Windows\xyz.dll'));
-  misc.dump(misc.getBaseName(r'C:\Windows\xyz.dll'));
+  misc.dump(misc.pathFullName(r'aaa.txt'));
+  misc.dump(misc.pathFileName(r'C:\Windows\xyz.dll'));
+  misc.dump(misc.pathBaseName(r'C:\Windows\xyz.dll'));
+  misc.dump(misc.pathDirectoryName(r'C:\Windows\xyz.dll'));
   misc.dump(await misc.directoryFiles(r'C:\Windows'));
   misc.dump(await misc.directoryDirs(r'C:\Windows'));
   misc.dump(await misc.directoryFiles(r'.'));
