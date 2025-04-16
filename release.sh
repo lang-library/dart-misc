@@ -10,7 +10,7 @@ cd $cwd
 dart analyze . --fatal-infos
 dart test
 
-tag="misc-v$version"
+tag="v$version"
 cd $cwd
 git add .
 git commit -m"$tag"
