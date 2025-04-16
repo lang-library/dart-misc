@@ -1,6 +1,7 @@
 #! /usr/bin/env -S dart
 
 import 'dart:core';
+import 'dart:convert' as convert;
 import 'dart:io' as io;
 import 'package:path/path.dart' as path;
 
@@ -58,4 +59,10 @@ Future<String> readFileText(String $path) async {
 Future<List<String>> readFileLines(String $path) async {
   final $file = io.File($path);
   return await $file.readAsLines();
+}
+
+List<String> textToLines(String $s) {
+  const $splitter = convert.LineSplitter();
+  final $lines = $splitter.convert($s);
+  return $lines;
 }
