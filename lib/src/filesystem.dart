@@ -6,6 +6,7 @@ import 'dart:io' as io;
 import 'package:path/path.dart' as path;
 
 void setCwd(String $path) {
+  print('[Log] setCwd(): ${$path}');
   io.Directory.current = $path;
 }
 
