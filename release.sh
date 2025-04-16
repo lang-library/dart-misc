@@ -12,7 +12,7 @@ dart test
 
 sed -i -e "s/<Version>.*<\/Version>/<Version>${version}<\/Version>/g" pubspec.yaml
 
-tag="v$version"
+tag="$version"
 cd $cwd
 git add .
 git commit -m"$tag"
