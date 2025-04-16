@@ -18,8 +18,8 @@ void dump(dynamic $x, [String? $title]) {
   String $mode = isInDebugMode ? 'DEBUG' : 'RELEASE';
   String $json = '${$x}';
   if ($title == null) {
-    print('[${$mode}] ${$json} ${$lineInfo}');
+    print('[${$mode}] ${$lineInfo} ${$json}');
   } else {
-    print('[${$mode}] ${$title}: ${$json} ${$lineInfo}');
+    print('[${$mode}] ${$lineInfo} ${$title}: ${$json}');
   }
 }
