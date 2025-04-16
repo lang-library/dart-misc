@@ -26,6 +26,7 @@ void main() async
     misc.dump(misc.getenv('HOME'));
     misc.command('dir', []);
     misc.tryCommand('dirxxx', []);
+    misc.$globalLogger.i([11, 22, 33]);
   } catch ($e, $stacktrace) {
     misc.dump($e, 'Exception');
     misc.dump($stacktrace, 'Stacktrace');

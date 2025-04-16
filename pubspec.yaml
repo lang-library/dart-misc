@@ -1,7 +1,7 @@
-# <Version>2025.0417.0651</Version>
+# <Version>2025.0417.0705</Version>
 name: misc
 description: "misc package project"
-version: 2025.0417.0651
+version: 2025.0417.0705
 homepage:
 
 environment:
