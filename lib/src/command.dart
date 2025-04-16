@@ -8,3 +8,10 @@ int command(String $cmd, List<String> $cmdArgs) {
   print('[Log] command(): ${$commandLine}');
   return misc.wsystem($commandLine);
 }
+
+void tryCommand(String $cmd, List<String> $cmdArgs) {
+  final $exitCode = command($cmd, $cmdArgs);
+  if ($exitCode != 0) {
+    throw '${$cmd} ${$cmdArgs} returned ${$exitCode}';
+  }
+}

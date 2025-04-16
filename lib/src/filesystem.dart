@@ -66,3 +66,7 @@ List<String> textToLines(String $s) {
   final $lines = $splitter.convert($s);
   return $lines;
 }
+
+String? getenv(String $name) {
+  return io.Platform.environment[$name];
+}
