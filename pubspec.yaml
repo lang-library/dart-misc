@@ -1,11 +1,11 @@
-# <Version>2025.0416.1621</Version>
+# <Version>2025.0416.1641</Version>
 name: misc
 description: "misc package project"
-version: 2025.0416.1621
+version: 2025.0416.1641
 homepage:
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.8.0
 
 dependencies:
   ffi: ^2.1.4

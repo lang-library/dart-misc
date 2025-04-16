@@ -41,3 +41,13 @@ Future<List<String>> directoryDirs(String $path) async {
   });
   return result;
 }
+
+Future<String> readFileText(String $path) async {
+  final $file = io.File($path);
+  return await $file.readAsString();
+}
+
+Future<List<String>> readFileLines(String $path) async {
+  final $file = io.File($path);
+  return await $file.readAsLines();
+}

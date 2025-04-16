@@ -18,4 +18,6 @@ void main() async
   misc.dump(await misc.directoryDirs(r'C:\Windows'));
   misc.dump(await misc.directoryFiles(r'.'));
   misc.dump(await misc.directoryDirs(r'.'));
+  misc.dump(await misc.readFileText(r'D:/home11/dart/git/dart-misc/pubspec.yaml'));
+  misc.dump(await misc.readFileLines(r'D:/home11/dart/git/dart-misc/pubspec.yaml'));
 }
