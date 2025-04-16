@@ -7,7 +7,7 @@ void echo(dynamic $x, [String? $title]) {
   if ($title == null) {
     print($json);
   } else {
-    print('${$title}: ${$json}');
+    print('${$title} ==> ${$json}');
   }
 }
 
@@ -20,6 +20,6 @@ void dump(dynamic $x, [String? $title]) {
   if ($title == null) {
     print('[${$mode}] ${$lineInfo} ${$json}');
   } else {
-    print('[${$mode}] ${$lineInfo} ${$title}: ${$json}');
+    print('[${$mode}] ${$lineInfo} ${$title} ==> ${$json}');
   }
 }
