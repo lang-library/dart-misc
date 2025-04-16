@@ -7,7 +7,7 @@ int command(String $cmd, List<String> $cmdArgs) {
   for (int i = 0; i < $cmdArgs.length; i++) {
     $commandLine += ' "${$cmdArgs[i]}"';
   }
-  _logger.i('command(): ${$commandLine}');
+  _logger.i('misc.command(): ${$commandLine}');
   return misc.wsystem($commandLine);
 }
 
