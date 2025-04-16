@@ -16,4 +16,6 @@ void main() async
   misc.dump(misc.getBaseName(r'C:\Windows\xyz.dll'));
   misc.dump(await misc.directoryFiles(r'C:\Windows'));
   misc.dump(await misc.directoryDirs(r'C:\Windows'));
+  misc.dump(await misc.directoryFiles(r'.'));
+  misc.dump(await misc.directoryDirs(r'.'));
 }

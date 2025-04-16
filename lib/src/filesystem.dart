@@ -26,8 +26,7 @@ Future<List<String>> directoryFiles(String $path) async {
   final Iterable<io.File> $files = $entities.whereType<io.File>();
   List<String> result = [];
   $files.toList().forEach((x) {
-    //print(path.absolute(x.path));
-    result.add(path.absolute(x.path));
+    result.add(path.normalize(path.absolute(x.path)));
   });
   return result;
 }
@@ -38,8 +37,7 @@ Future<List<String>> directoryDirs(String $path) async {
   final Iterable<io.Directory> $dirs = $entities.whereType<io.Directory>();
   List<String> result = [];
   $dirs.toList().forEach((x) {
-    //print(path.absolute(x.path));
-    result.add(path.absolute(x.path));
+    result.add(path.normalize(path.absolute(x.path)));
   });
   return result;
 }
