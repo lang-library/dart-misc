@@ -3,7 +3,7 @@ import 'dart:convert' as convert;
 import 'package:misc/misc.dart';
 
 void echo(dynamic $x, [String? $title]) {
-  String $json = '${$x}';
+  String $json = ($x is String) ? '`${$x}`' : '${$x}';
   if ($title == null) {
     print($json);
   } else {
@@ -16,7 +16,7 @@ void dump(dynamic $x, [String? $title]) {
   final $lines = $splitter.convert(StackTrace.current.toString());
   final $lineInfo = '@${$lines[1].replaceAll('#1      ', '')}';
   String $mode = isInDebugMode ? 'DEBUG' : 'RELEASE';
-  String $json = '${$x}';
+  String $json = ($x is String) ? '`${$x}`' : '${$x}';
   if ($title == null) {
     print('[${$mode}] ${$lineInfo} ${$json}');
   } else {

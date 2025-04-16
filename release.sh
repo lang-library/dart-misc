@@ -22,3 +22,4 @@ git tag -a "$tag" -m"$tag"
 git push origin "$tag"
 git push origin HEAD:main
 git remote -v
+echo $tag
