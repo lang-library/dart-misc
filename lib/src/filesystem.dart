@@ -4,12 +4,12 @@ import 'dart:core';
 import 'dart:convert' as convert;
 import 'dart:io' as io;
 import 'package:path/path.dart' as path;
-import 'package:misc/misc.dart' as misc;
+//import 'package:misc/misc.dart' as misc;
 
-final _logger = misc.$globalLogger;
+//final _logger = misc.$globalLogger;
 
 void setCwd(String $path) {
-  _logger.i('misc.setCwd(): ${$path}');
+  //_logger.i('misc.setCwd(): ${$path}');
   io.Directory.current = $path;
 }
 
