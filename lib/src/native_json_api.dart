@@ -25,10 +25,12 @@ class NativeJsonApi {
           >
         >('Call')
         .asFunction();
-    call$ = /*misc.*/DynamicFunction(($positional, $named) {
-      List<dynamic> $args = $positional;
-      String $name = $args[0];
-      List $rest = $args.sublist(1);
+    call$ = DynamicFunction((
+      List<dynamic> $positional,
+      Map<Symbol, dynamic> $named,
+    ) {
+      String $name = $positional[0];
+      List $rest = $positional.sublist(1);
       return call($name, $rest);
     });
   }
