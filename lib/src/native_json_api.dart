@@ -1,7 +1,8 @@
 import 'dart:convert' as convert;
 import 'dart:ffi' as ffi;
 import 'package:ffi/ffi.dart' as ffi;
-import 'package:misc/misc.dart' as misc;
+import 'package:dynamic_function/dynamic_function.dart';
+//import 'package:misc/misc.dart' as misc;
 
 class NativeJsonApi {
   final String $$dllName;
@@ -24,7 +25,7 @@ class NativeJsonApi {
           >
         >('Call')
         .asFunction();
-    call$ = misc.DynamicFunction(($positional, $named) {
+    call$ = /*misc.*/DynamicFunction(($positional, $named) {
       List<dynamic> $args = $positional;
       String $name = $args[0];
       List $rest = $args.sublist(1);
