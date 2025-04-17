@@ -1,7 +1,7 @@
-# <Version>2025.0418.0025</Version>
+# <Version>2025.0418.0152</Version>
 name: misc
 description: "misc package project"
-version: 2025.0418.0025
+version: 2025.0418.0152
 homepage:
 
 environment:
@@ -12,6 +12,7 @@ dependencies:
   ffi: ^2.1.4
   logger: ^2.5.0
   path: ^1.9.1
+  sys: ^0.0.1
 
 dev_dependencies:
   lints: ^5.1.1
