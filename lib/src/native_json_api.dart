@@ -25,14 +25,6 @@ class NativeJsonApi {
           >
         >('Call')
         .asFunction();
-    call$ = DynamicFunction((
-      List<dynamic> $positional,
-      Map<Symbol, dynamic> $named,
-    ) {
-      String $name = $positional[0];
-      List $rest = $positional.sublist(1);
-      return call($name, $rest);
-    });
   }
 
   dynamic call(String $name, dynamic $args) {
@@ -50,5 +42,12 @@ class NativeJsonApi {
     return $result[0];
   }
 
-  late final dynamic call$;
+  late final dynamic call$ = DynamicFunction((
+    List<dynamic> $positional,
+    Map<Symbol, dynamic> $named,
+  ) {
+    String $name = $positional[0];
+    List $rest = $positional.sublist(1);
+    return call($name, $rest);
+  });
 }
